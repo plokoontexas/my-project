@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+#!/usr/bin/env python3
 
 # prompt the user for their position
 position = int(input("Please enter a position in the Fibonacci sequence: "))
@@ -12,4 +13,4 @@ for i in range(position):
 fibonacci_number = a
 
 print(f"The Fibonacci number for {position} is {fibonacci_number}")
- 
+
