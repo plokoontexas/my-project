@@ -20,29 +20,34 @@ def get_args():
     #parse the arguments
 
     args = parser.parse_args()
+    return args
 
 ###------ Functuion to calculate the fibonacci 
 def fib():
 
     a, b = 0, 1
 
-    for i in range(int(args.position)):
+    for i in range(int(pheobe.position)):
         a, b = b, a + b
 
     fibonacci_number = a
+    return fibonacci_number
 
 #Function to print output
-def print_output():
-    if args.verbose:
-        print(f"The Fibonacci number for {args.position} is {fibonacci_number}")
+def print_output(output):
+    if pheobe.verbose:
+        print(f"The Fibonacci number for {pheobe.position} is {output}")
     else: 
-        print(fibonacci_number)
+        print(output)
 
 
 ###--- define the main function
 def main():
-    
+    fib_num = fib()
+    print_output(fib_num)
 
+###--- calling get_args() happens out here on its own 
+pheobe = get_args()
 
 # set the environment for this script 
 # is this main or 
