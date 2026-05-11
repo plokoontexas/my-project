@@ -4,10 +4,10 @@ import argparse
 import gff_functions
 
 def main():
-    genome_sequence = gff_functions.read_fasta()
-    print(genome_sequence)
+    genome_sequence = gff_functions.read_fasta(args.fasta)
+    print(len(genome_sequence))
 
-    gff_functions.read_gff()
+    gff_functions.read_gff(args.gff3, genome_sequence)
     gff_functions.write_output()
 # Funtion to parse the command line arguments
 def get_args():
